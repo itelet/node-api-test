@@ -1,9 +1,9 @@
 const { mockPostResponse } = require("../../data/mock-data");
 
 exports.getPosts = (req, res) => {
-	if (mockPostResponse.length < 1) {
-		return res.status(404).json({ error: "No posts found" });
-	}
+  if (mockPostResponse.length < 1) {
+    return res.status(404).json({ error: "No posts found" });
+  }
 
   return res.status(200).json({ data: mockPostResponse });
 };
